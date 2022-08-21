@@ -70,9 +70,20 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.volar.setup {
+  on_attach = on_attach,
+  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
+}
+
 --nvim_lsp.sourcekit.setup {
 --  on_attach = on_attach,
 --}
+
+nvim_lsp.pyright.setup{
+  on_attach = on_attach,
+  cmd = {"pyright-langserver", "--stdio"},
+  filetypes = { "python" }
+}
 
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,

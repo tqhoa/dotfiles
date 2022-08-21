@@ -13,6 +13,24 @@ local groups = cb.groups
 local styles = cb.styles
 
 Color.new('black', '#000000')
+Color.new('red', '#f7338b')
+
+-- todo change 
+--Color.new('white',     '#f2e5bc')
+--Color.new('red',       '#cc6666')
+--Color.new('pink',      '#fef601')
+--Color.new('green',     '#99cc99')
+--Color.new('yellow',    '#f8fe7a')
+--Color.new('blue',      '#81a2be')
+--Color.new('aqua',      '#8ec07c')
+---Color.new('cyan',     '#8abeb7')
+--Color.new('purple',    '#8e6fbd')
+--Color.new('violet',    '#b294bb')
+--Color.new('orange',    '#de935f')
+--Color.new('brown',     '#a3685a')
+--Color.new('seagreen',  '#698b69')
+--Color.new('turquoise', '#698b69')
+
 Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
 Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)
 Group.new('Visual', colors.none, colors.base03, styles.reverse)
