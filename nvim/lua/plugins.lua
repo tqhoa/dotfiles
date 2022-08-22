@@ -36,7 +36,16 @@ packer.startup(function(use)
 
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
-  use 'nvim-telescope/telescope.nvim'
+
+  use{
+    'nvim-telescope/telescope.nvim',
+    requires = {
+      'kdheepak/lazygit.nvim'
+    },
+    config = function()
+      require("telescope").load_extension("lazygit")
+    end,
+  }
   use 'nvim-telescope/telescope-file-browser.nvim'
 
   use 'akinsho/nvim-bufferline.lua'
@@ -44,5 +53,9 @@ packer.startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
+
+  use 'Pocco81/AutoSave.nvim'
+  use 'terrortylor/nvim-comment'
 end)
+
 

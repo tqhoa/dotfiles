@@ -13,7 +13,7 @@ local groups = cb.groups
 local styles = cb.styles
 
 Color.new('black', '#000000')
-Color.new('red', '#f7338b')
+Color.new('red', '#cc6666')
 
 -- todo change 
 --Color.new('white',     '#f2e5bc')

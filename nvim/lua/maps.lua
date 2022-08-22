@@ -13,7 +13,8 @@ keymap.set('n', 'dw', 'vb"_d')
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- New tab
-keymap.set('n', 'te', ':tabedit')
+-- keymap.set('n', 'te', ':tabedit')
+keymap.set('n', 'te', '<cmd> tabedit <cr>')
 
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w')
@@ -31,3 +32,6 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
+
+-- Tools
+keymap.set('n', '<Leader>gg', '<cmd> LazyGit <cr>')
