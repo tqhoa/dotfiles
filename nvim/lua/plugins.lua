@@ -52,10 +52,11 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
 
   use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim' -- For git blame & browse
 
   use 'Pocco81/AutoSave.nvim'
   use 'terrortylor/nvim-comment'
+
+  use 'kyazdani42/nvim-tree.lua'
 end)
 
 

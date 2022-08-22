@@ -11,6 +11,6 @@ comment.setup({
 })
 
 vim.cmd([[
-  autocmd BufEnter *.php, *.vue, *.css, *.scss, *.py, *.ts :lua vim.api.nvim_buf_set_option(0, "commentstring", "// %s")
-  autocmd BufFilePost *.php, *.vue, *.css, *.scss, *.py, *.ts :lua vim.api.nvim_buf_set_option(0, "commentstring", "// %s")
+  autocmd BufEnter *.css, *.scss, *.ts :lua vim.api.nvim_buf_set_option(0, "commentstring", "// %s")
+  autocmd BufFilePost *.css, *.scss, *.ts :lua vim.api.nvim_buf_set_option(0, "commentstring", "// %s")
 ]])

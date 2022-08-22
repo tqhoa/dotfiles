@@ -110,6 +110,12 @@ on_attach = on_attach,
   capabilities = capabilities
 }
 
+nvim_lsp.intelephense.setup{
+  on_attach = on_attach,
+  cmd = { "intelephense", "--stdio" },
+  filetypes = { "php" }
+}
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
