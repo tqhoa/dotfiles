@@ -12,8 +12,8 @@ local Group = cb.Group
 local groups = cb.groups
 local styles = cb.styles
 
-Color.new('black', '#000000')
-Color.new('red', '#cc6666')
+Color.new('black', '#99cc99')
+Color.new('red', '#00ba7c')
 
 -- todo change 
 --Color.new('white',     '#f2e5bc')
