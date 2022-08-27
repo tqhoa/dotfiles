@@ -6,11 +6,16 @@ prettier.setup ({
   filetypes = {
     "css",
     "javascript",
-    "javascriptreact",
     "typescript",
-    "typescriptreact",
     "json",
     "scss",
-    "less"
+    "less",
+    "html",
+    "yaml",
+    "markdown"
   }
 })
+
+
+--config for editorconfig
+--vim.g.EditorConfig_max_line_indicator = "none"

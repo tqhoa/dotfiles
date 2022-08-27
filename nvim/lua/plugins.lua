@@ -38,14 +38,19 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  use 'p00f/nvim-ts-rainbow'
+  use 'andymass/vim-matchup'
 
   -- Fortmat & editing
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
+  --use 'editorconfig/editorconfig-vim'
+
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use 'Pocco81/AutoSave.nvim'
   use 'terrortylor/nvim-comment'
+  --use 'numToStr/Comment.nvim'
 
   -- Navigation
   use 'kyazdani42/nvim-tree.lua'
@@ -63,10 +68,11 @@ packer.startup(function(use)
   -- Eye views
   use 'lewis6991/gitsigns.nvim'
   use 'norcalli/nvim-colorizer.lua'
-  use 'p00f/nvim-ts-rainbow'
+  --use 'lukas-reineke/indent-blankline.nvim'
+  use 'winston0410/range-highlight.nvim'
+  use 'winston0410/cmd-parser.nvim'
 
   -- Integrations
-
 end)
 
 
