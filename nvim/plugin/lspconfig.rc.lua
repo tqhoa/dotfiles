@@ -1,4 +1,4 @@
-vim.lsp.set_log_level("debug")
+--vim.lsp.set_log_level("debug")
 
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
@@ -103,12 +103,11 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
-nvim_lsp.tailwindcss.setup {
-on_attach = on_attach,
-  filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "django-html", "htmldjango", "edge", "eelixir", "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "heex", "jade", "leaf", "liquid", "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript", "typescriptreact", "vue", "svelte" },
-  cmd = { "tailwindcss-language-server", "--stdio" },
-  capabilities = capabilities
-}
+-- nvim_lsp.tailwindcss.setup {
+-- on_attach = on_attach,
+--   cmd = { "tailwindcss-language-server", "--stdio" },
+--   capabilities = capabilities
+-- }
 
 nvim_lsp.intelephense.setup{
   on_attach = on_attach,
@@ -116,14 +115,27 @@ nvim_lsp.intelephense.setup{
   filetypes = { "php" }
 }
 
+
+local css_capabilities = vim.lsp.protocol.make_client_capabilities()
+css_capabilities.textDocument.completion.completionItem.snippetSupport = true
+nvim_lsp.cssls.setup{
+  on_attach = on_attach,
+  capabilities = css_capabilities
+}
+nvim_lsp.html.setup{
+  on_attach = on_attach,
+  capabilities = css_capabilities
+}
+
+
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
   update_in_insert = false,
   virtual_text = { spacing = 4, prefix = "●" },
   severity_sort = true,
-}
-)
+})
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }

@@ -10,12 +10,9 @@ prettier.setup ({
     "json",
     "scss",
     "less",
+    "vue",
     "html",
-    "yaml",
+    "yml",
     "markdown"
   }
 })
-
-
---config for editorconfig
---vim.g.EditorConfig_max_line_indicator = "none"

@@ -38,10 +38,6 @@ ts.setup {
     colors = {"#c1bf89", "#87c095", "#82abbc", "#d39bb6", "#acb765"} -- table of hex strings
     -- termcolors = {} -- table of colour name strings
   },
-
-  matchup = {
-    enable = true
-  }
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
