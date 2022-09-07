@@ -64,6 +64,7 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'p00f/nvim-ts-rainbow'
+  use 'glepnir/dashboard-nvim'
 
   -- Integrations
 
