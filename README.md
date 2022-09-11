@@ -16,6 +16,7 @@ sudo npm i -g vscode-langservers-extracted
 ## null-ls
 
 ```
+sudo npm install -g eslint_d
 sudo npm install -g @fsouza/prettierd
 pip3 install --upgrade autopep8
 https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/installation.rst

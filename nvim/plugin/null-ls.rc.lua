@@ -4,12 +4,10 @@ if (not status) then return end
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 
 null_ls.setup ({
-  debug = true,
+  debug = false,
 
   sources = {
-    null_ls.builtins.diagnostics.eslint_d.with({
-      diagnostics_format = '[eslint] #{m}\n(#{c})'
-    }),
+    null_ls.builtins.formatting.eslint_d,
 
     null_ls.builtins.formatting.prettierd.with({
       filetypes = {"css", "scss", "less", "json", "yaml", "html", "markdown"}

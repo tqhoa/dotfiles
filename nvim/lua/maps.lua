@@ -37,4 +37,10 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 -- bindings Nvimtree, LazyGit, Autosave
 keymap.set('n', '<Leader>gg', '<cmd> LazyGit <cr>')
 keymap.set('n', '<F2>', '<cmd> NvimTreeToggle <cr>')
+keymap.set('n', 'ee', '<cmd> NvimTreeToggle <cr>')
 keymap.set('n', '<leader>as', '<cmd> ASToggle <cr>')
+
+
+
+keymap.set('i', 'jk', '<ESC>', {noremap = true, silent = false})
+keymap.set('i', 'kj', '<ESC>', {noremap = true, silent = false})

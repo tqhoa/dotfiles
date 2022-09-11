@@ -41,7 +41,7 @@ packer.startup(function(use)
 
   -- Fortmat & editing
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-  use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
+  --use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use 'Pocco81/AutoSave.nvim'
