@@ -23,5 +23,10 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
     vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
 end)
 
-inden.setup { indent = { highlight = highlight } }
+inden.setup {
+  enabled = false,
+  indent = { highlight = highlight, char = "▏"},
+  whitespace = {highlight = highlight, remove_blankline_trail = true},
+  scope = {enabled = false}
+}
 

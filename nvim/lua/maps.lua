@@ -44,3 +44,8 @@ keymap.set('n', '<leader>as', '<cmd> ASToggle <cr>')
 
 keymap.set('i', 'jk', '<ESC>', {noremap = true, silent = false})
 keymap.set('i', 'kj', '<ESC>', {noremap = true, silent = false})
+
+keymap.set('n', 'wk', '<cmd> WhichKey <cr>')
+
+-- MINI
+keymap.set('n', 'mf', '<cmd>lua MiniFiles.open() <cr>')

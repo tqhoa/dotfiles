@@ -6,6 +6,7 @@ ts.setup {
     enable = true,
     disable = {},
   },
+
   modules= {},
   auto_install= false,
   sync_install= false,

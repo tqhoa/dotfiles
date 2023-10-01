@@ -65,6 +65,8 @@ packer.startup(function(use)
   use 'p00f/nvim-ts-rainbow'
   use 'glepnir/dashboard-nvim'
   use "lukas-reineke/indent-blankline.nvim"
+  use "folke/which-key.nvim"
+  use { 'echasnovski/mini.nvim', branch = 'stable' }
 
   -- debug
   use 'rcarriga/nvim-notify'
