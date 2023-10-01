@@ -86,7 +86,7 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ''
+    return ''
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -181,7 +181,7 @@ ins_left {
 -- Add components to right sections
 ins_right {
   'hostname',
-  icon = '',
+  icon = '󰈀',
   color = {fg = colors.fg, gui = 'bold'}
 }
 

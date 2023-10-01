@@ -4,8 +4,6 @@ if (not status) then return end
 nvim_tree.setup({
   disable_netrw       = true,
   hijack_netrw        = true,
-  --open_on_setup       = false,
-  --ignore_ft_on_setup  = {},
   open_on_tab         = false,
   hijack_cursor       = false,
   update_cwd          = false,
@@ -35,9 +33,5 @@ nvim_tree.setup({
 
   view = {
     side = 'left',
-    mappings = {
-      custom_only = false,
-      list = {}
-    }
   }
 })

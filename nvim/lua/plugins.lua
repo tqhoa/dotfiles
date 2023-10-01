@@ -64,9 +64,11 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'p00f/nvim-ts-rainbow'
   use 'glepnir/dashboard-nvim'
+  use "lukas-reineke/indent-blankline.nvim"
 
-  -- Integrations
+  -- debug
+  use 'rcarriga/nvim-notify'
+  use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
 end)
-
-

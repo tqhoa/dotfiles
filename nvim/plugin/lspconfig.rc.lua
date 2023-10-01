@@ -27,23 +27,23 @@ end
 
 protocol.CompletionItemKind = {
   '', -- Text
-  '', -- Method
-  '', -- Function
-  '', -- Constructor
+  '', -- Method
+  '󰊕', -- Function
+  '󱘖', -- Constructor
   '', -- Field
   '', -- Variable
   '', -- Class
-  'ﰮ', -- Interface
-  '', -- Module
+  '', -- Interface
+  '󰕳', -- Module
   '', -- Property
   '', -- Unit
   '', -- Value
   '', -- Enum
   '', -- Keyword
-  '﬌', -- Snippet
+  '', -- Snippet
   '', -- Color
   '', -- File
-  '', -- Reference
+  '', -- Reference
   '', -- Folder
   '', -- EnumMember
   '', -- Constant
@@ -55,13 +55,9 @@ protocol.CompletionItemKind = {
 
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities(
-  vim.lsp.protocol.make_client_capabilities()
+  --vim.lsp.protocol.make_client_capabilities()
 )
 
---nvim_lsp.flow.setup {
---  on_attach = on_attach,
---  capabilities = capabilities
---}
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
@@ -75,9 +71,6 @@ nvim_lsp.volar.setup {
   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 }
 
---nvim_lsp.sourcekit.setup {
---  on_attach = on_attach,
---}
 
 nvim_lsp.pyright.setup{
   on_attach = on_attach,
@@ -103,17 +96,17 @@ nvim_lsp.lua_ls.setup {
   },
 }
 
--- nvim_lsp.tailwindcss.setup {
--- on_attach = on_attach,
---   cmd = { "tailwindcss-language-server", "--stdio" },
---   capabilities = capabilities
--- }
-
-nvim_lsp.intelephense.setup{
+nvim_lsp.tailwindcss.setup {
   on_attach = on_attach,
-  cmd = { "intelephense", "--stdio" },
-  filetypes = { "php" }
+  --cmd = { "tailwindcss-language-server", "--stdio" },
+  capabilities = capabilities
 }
+
+--nvim_lsp.intelephense.setup{
+--  on_attach = on_attach,
+--  cmd = { "intelephense", "--stdio" },
+--  filetypes = { "php" }
+--}
 
 
 local css_capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -138,7 +131,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 })
 
 -- Diagnostic symbols in the sign column (gutter)
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = " ", Warn = " ", Hint = "󱚝", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
