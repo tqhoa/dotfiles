@@ -6,6 +6,7 @@
 - install fisher
 
 ### Font
+- https://github.com/ryanoasis/nerd-fonts
 
 ## Install language-server lsp Config
 
