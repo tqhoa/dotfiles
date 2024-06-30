@@ -2,6 +2,11 @@
 
 - https://github.com/jesseduffield/lazygit
 
+### fishShell
+- install fisher
+
+### Font
+
 ## Install language-server lsp Config
 
 ```
