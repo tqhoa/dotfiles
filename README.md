@@ -3,9 +3,17 @@
 - https://github.com/jesseduffield/lazygit
 
 ### fishShell
-- install fisher
+
+- Packages:
+  jorgebucaran/fisher
+  jorgebucaran/nvm.fish
+  ilancosman/tide@v5
+  gazorby/fish-exa
+  jethrokuan/z
+  patrickf1/fzf.fish
 
 ### Font
+
 - https://github.com/ryanoasis/nerd-fonts
 
 ## Install language-server lsp Config
