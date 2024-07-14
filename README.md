@@ -1,6 +1,6 @@
 ## Tool dev
-
 - https://github.com/jesseduffield/lazygit
+- https://github.com/ryanoasis/nerd-fonts 
 
 ### fishShell
 
@@ -13,12 +13,11 @@
   jethrokuan/z
   patrickf1/fzf.fish
 ```
+## tmux
+  ```https://github.com/tmux-plugins/tpm```
 
-### Font
-
-- https://github.com/ryanoasis/nerd-fonts
-
-## Install language-server lsp Config
+## nvim
+### Install language-server lsp Config
 
 ```
 sudo npm install -g typescript typescript-language-server
@@ -27,9 +26,9 @@ sudo npm install -g @volar/vue-language-server
 sudo npm install -g pyright
 sudo npm install -g intelephense
 sudo npm i -g vscode-langservers-extracted
-```
 
-## null-ls
+```
+### null-ls
 
 ```
 sudo npm install -g eslint_d
