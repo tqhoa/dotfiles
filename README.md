@@ -4,13 +4,15 @@
 
 ### fishShell
 
-- Packages:
+#### Packages:
+```
   jorgebucaran/fisher
   jorgebucaran/nvm.fish
   ilancosman/tide@v5
   gazorby/fish-exa
   jethrokuan/z
   patrickf1/fzf.fish
+```
 
 ### Font
 
