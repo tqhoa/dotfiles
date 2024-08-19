@@ -1,0 +1,20 @@
+### Install python 3.10, pip and venv in Ubuntu 18|20
+```
+sudo apt update && sudo apt upgrade -y
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt install python3.10
+python3.10 --version
+curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
+python3.10 -m pip --version
+python3.10 -m pip install --upgrade pip
+sudo apt install python3.10-venv
+```
+
+### Create a virtual environment
+```
+python3.10 -m venv venv3.10
+source venv3.10/bin/activate
+```
+
+### Use --update-alternatives switch version
