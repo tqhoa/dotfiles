@@ -5,6 +5,16 @@
 
 local keymap = vim.keymap
 
+keymap.set("n", "x", '"_x')
+
+-- Increment/decrement
+keymap.set("n", "+", "<C-a>")
+keymap.set("n", "-", "<C-x>")
+
+-- Select all
+keymap.set("n", "<C-a>", "gg<S-v>G")
+
+-- Tabs
 keymap.set("n", "te", "<cmd> tabedit <cr>")
 
 -- Split window
@@ -17,6 +27,12 @@ keymap.set("", "sh", "<C-w>h")
 keymap.set("", "sk", "<C-w>k")
 keymap.set("", "sj", "<C-w>j")
 keymap.set("", "sl", "<C-w>l")
+
+-- Resize window
+keymap.set("n", "<C-w><left>", "<C-w><")
+keymap.set("n", "<C-w><right>", "<C-w>>")
+keymap.set("n", "<C-w><up>", "<C-w>+")
+keymap.set("n", "<C-w><down>", "<C-w>-")
 
 keymap.set("i", "jj", "<ESC>", { noremap = true, silent = false })
 keymap.set("i", "kk", "<ESC>", { noremap = true, silent = false })

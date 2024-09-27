@@ -10,7 +10,7 @@ return {
         message = function() -- message to print on save
           return ("AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"))
         end,
-        dim = 0.1, -- dim the color of `message`
+        dim = 2.1, -- dim the color of `message`
         cleaning_interval = 100, -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea
       },
       conditions = {

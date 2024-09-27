@@ -85,6 +85,7 @@ return {
       desc = "Open File Browser with the path of the current buffer",
     },
   },
+
   config = function(_, opts)
     local telescope = require("telescope")
     local actions = require("telescope.actions")
@@ -117,6 +118,8 @@ return {
           -- your custom insert mode mappings
           ["n"] = {
             ["h"] = fb_actions.goto_parent_dir,
+            ["n"] = fb_actions.create,
+            ["d"] = fb_actions.remove,
             ["/"] = function()
               vim.cmd("startinsert")
             end,
