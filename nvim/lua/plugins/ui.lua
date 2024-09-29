@@ -94,4 +94,16 @@ return {
       }
     end,
   },
+
+  -- Noice, cmdLine
+  {
+    "folke/noice.nvim",
+    opts = {
+      cmdline = {
+        enabled = true,
+      },
+
+      presets = { command_palette = false },
+    },
+  },
 }

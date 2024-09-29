@@ -36,3 +36,5 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 
 keymap.set("i", "jj", "<ESC>", { noremap = true, silent = false })
 keymap.set("i", "kk", "<ESC>", { noremap = true, silent = false })
+
+-- Plugins
