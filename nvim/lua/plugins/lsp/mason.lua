@@ -1,20 +1,3 @@
---[[
-return {
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        -- LSP server
-        "pyright",
-        "tailwindcss-language-server",
-        "typescript-language-server",
-        "vue-language-server",
-      },
-    },
-  },
-}
---]]
-
 return {
   "williamboman/mason.nvim",
   dependencies = {
@@ -45,17 +28,17 @@ return {
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
-        -- "ts_ls",
+        "ts_ls",
         -- "html",
-        -- "cssls",
-        -- "tailwindcss",
+        "cssls",
+        "tailwindcss",
         -- "svelte",
         -- "lua_ls",
         -- "graphql",
         -- "emmet_ls",
         -- "prismals",
         "pyright",
-        -- "rust-analyzer",
+        "volar",
       },
     })
 
