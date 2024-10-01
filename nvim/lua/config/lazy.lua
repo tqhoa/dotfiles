@@ -29,6 +29,7 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "plugins" },
     { import = "plugins.lsp" },
+    { import = "plugins.ui" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -41,7 +42,7 @@ require("lazy").setup({
   },
   --install = { colorscheme = { "habamax" } },
   checker = {
-    enabled = true, -- check for plugin updates periodically
+    enabled = false, -- check for plugin updates periodically
     notify = true, -- notify on update
   }, -- automatically check for plugin updates
   performance = {

@@ -33,6 +33,8 @@ vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*" })
 vim.opt.splitbelow = true -- Put new windows below current
 vim.opt.splitright = true -- Put new windows right of current
+
+-- Disabled mouse
 vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 
