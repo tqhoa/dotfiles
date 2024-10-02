@@ -15,5 +15,7 @@ return {
     opts.theme = "doom"
 
     opts.config.week_header = { enable = false }
+
+    opts.config.footer = {}
   end,
 }

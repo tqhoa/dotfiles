@@ -77,9 +77,9 @@ return {
           respect_gitignore = false,
           hidden = true,
           grouped = true,
-          previewer = false,
+          previewer = true,
           initial_mode = "normal",
-          layout_config = { height = 40 },
+          layout_config = { height = 40, prompt_position = "top" },
         })
       end,
       desc = "Open File Browser with the path of the current buffer",
@@ -94,7 +94,7 @@ return {
     opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
       wrap_results = true,
       layout_strategy = "horizontal",
-      layout_config = { prompt_position = "top" },
+      layout_config = { prompt_position = "bottom" },
       sorting_strategy = "ascending",
       winblend = 0,
       mappings = {
