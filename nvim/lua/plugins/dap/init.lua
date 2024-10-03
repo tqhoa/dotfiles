@@ -9,6 +9,7 @@ return {
     "nvim-telescope/telescope-dap.nvim", -- telescope integration with dap
   },
   opts = {
+    --[[
     controls = {
       element = "repl",
       enabled = false,
@@ -91,23 +92,46 @@ return {
       indent = 1,
       max_value_lines = 100,
     },
+    --]]
+  },
+  keys = {
+    { "<leader>d", "", desc = "+debug", mode = { "n", "v" } },
+    {
+      "<leader>db",
+      function()
+        require("dap").toggle_breakpoint()
+      end,
+      desc = "Toggle Breakpoint",
+    },
+    {
+      "<leader>dc",
+      function()
+        require("dap").continue()
+      end,
+      desc = "Continue",
+    },
   },
   config = function(_, opts)
     local dap = require("dap")
-    require("dapui").setup(opts)
+    local dap_ui = require("dapui")
+
+    dap_ui.setup(opts)
+    -- Config UI
+    vim.fn.sign_define("DapBreakpoint", { text = "" })
 
     dap.listeners.after.event_initialized["dapui_config"] = function()
-      require("dapui").open()
+      --require("dapui").open()
+      dap_ui.open()
     end
 
     dap.listeners.before.event_terminated["dapui_config"] = function()
-      -- Commented to prevent DAP UI from closing when unit tests finish
-      require("dapui").close()
+      --require("dapui").close()
+      dap_ui.close()
     end
 
     dap.listeners.before.event_exited["dapui_config"] = function()
-      -- Commented to prevent DAP UI from closing when unit tests finish
-      require("dapui").close()
+      dap_ui.close()
+      --require("dapui").close()
     end
   end,
 }

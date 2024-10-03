@@ -36,16 +36,15 @@ set -gx PATH node_modules/.bin $PATH
 #set -gx PATH $GOPATH/bin $PATH
 
 # NVM
-function __check_rvm --on-variable PWD --description 'Do nvm stuff'
-    status --is-command-substitution; and return
+#function __check_rvm --on-variable PWD --description 'Do nvm stuff'
+#    status --is-command-substitution; and return
 
-    if test -f .nvmrc; and test -r .nvmrc
-        nvm use
-    else
-    end
-end
-
-set --universal nvm_default_version v21.7.1
+#    if test -f .nvmrc; and test -r .nvmrc
+#       nvm use
+#    else
+#    end
+#end
+#set --universal nvm_default_version v21.7.1
 
 switch (uname)
     case Darwin
