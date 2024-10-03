@@ -1,3 +1,4 @@
+local layout_strategies = require("telescope.pickers.layout_strategies")
 return {
   "telescope.nvim",
   dependencies = {
@@ -79,7 +80,9 @@ return {
           grouped = true,
           previewer = true,
           initial_mode = "normal",
-          layout_config = { height = 40, prompt_position = "top" },
+          layout_config = { prompt_position = "top", width = 200, height = 40 },
+          sorting_strategy = "ascending",
+          layout_strategy = "horizontal",
         })
       end,
       desc = "Open File Browser with the path of the current buffer",
@@ -94,7 +97,7 @@ return {
     opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
       wrap_results = true,
       layout_strategy = "horizontal",
-      layout_config = { prompt_position = "bottom" },
+      --layout_config = { prompt_position = "bottom" },
       sorting_strategy = "ascending",
       winblend = 0,
       mappings = {
@@ -138,9 +141,12 @@ return {
           },
         },
       },
+
+      --dap = { layout_config = { prompt_position = "top" } },
     }
     telescope.setup(opts)
     require("telescope").load_extension("fzf")
     require("telescope").load_extension("file_browser")
+    --require("telescope").load_extension("dap")
   end,
 }
