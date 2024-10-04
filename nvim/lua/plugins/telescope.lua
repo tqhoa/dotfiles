@@ -63,6 +63,7 @@ return {
       end,
       desc = "Lists Diagnostics for all open buffers or a specific buffer",
     },
+
     {
       "fd",
       function()
@@ -80,9 +81,9 @@ return {
           grouped = true,
           previewer = true,
           initial_mode = "normal",
-          layout_config = { prompt_position = "top", width = 200, height = 40 },
+          layout_config = { prompt_position = "top", width = 0.75, height = 0.8, preview_width = 0.55 },
           sorting_strategy = "ascending",
-          layout_strategy = "horizontal",
+          layout_strategy = "bottom_pane",
         })
       end,
       desc = "Open File Browser with the path of the current buffer",
@@ -141,8 +142,6 @@ return {
           },
         },
       },
-
-      --dap = { layout_config = { prompt_position = "top" } },
     }
     telescope.setup(opts)
     require("telescope").load_extension("fzf")
