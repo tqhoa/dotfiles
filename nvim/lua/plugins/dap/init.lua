@@ -97,18 +97,32 @@ return {
   keys = {
     { "<leader>d", "", desc = "+debug", mode = { "n", "v" } },
     {
-      "<leader>db",
+      "<leader><F9>",
       function()
         require("dap").toggle_breakpoint()
       end,
       desc = "Toggle Breakpoint",
     },
     {
-      "<leader>dc",
+      "<F9>",
       function()
         require("dap").continue()
       end,
       desc = "Continue",
+    },
+    {
+      "<F10>",
+      function()
+        require("dap").step_info()
+      end,
+      desc = "Step Info",
+    },
+    {
+      "<leader><F10>",
+      function()
+        require("dap").step_over()
+      end,
+      desc = "Step Over",
     },
   },
   config = function(_, opts)
@@ -120,18 +134,18 @@ return {
     vim.fn.sign_define("DapBreakpoint", { text = "" })
 
     dap.listeners.after.event_initialized["dapui_config"] = function()
-      --require("dapui").open()
+      require("dapui").open()
       dap_ui.open()
     end
 
     dap.listeners.before.event_terminated["dapui_config"] = function()
-      --require("dapui").close()
-      dap_ui.close()
+      require("dapui").close()
+      --dap_ui.close()
     end
 
     dap.listeners.before.event_exited["dapui_config"] = function()
-      dap_ui.close()
-      --require("dapui").close()
+      --dap_ui.close()
+      require("dapui").close()
     end
   end,
 }

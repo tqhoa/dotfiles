@@ -71,4 +71,10 @@ return {
       },
     },
   },
+
+  -- Search flash
+  {
+    "folke/flash.nvim",
+    keys = { { "s", false } },
+  },
 }
