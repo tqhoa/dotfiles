@@ -8,7 +8,6 @@ vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
 vim.opt.number = true
-
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
@@ -46,6 +45,10 @@ vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
 vim.opt.pumblend = 5
 vim.opt.background = "dark"
+
+-- Folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
