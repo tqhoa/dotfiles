@@ -8,6 +8,7 @@ return {
       "vue",
       "css",
       "scss",
+      "http",
     },
 
     rainbow = { enable = true, disable = {}, extended_mode = true, max_file_lines = nil },
