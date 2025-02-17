@@ -1,5 +1,5 @@
 return {
   "folke/snacks.nvim",
   lazy = false,
-  opts = {},
+  opts = { indent = { enabled = false } },
 }

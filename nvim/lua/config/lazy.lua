@@ -34,6 +34,7 @@ require("lazy").setup({
 
     -- import any extras modules here
     --{ import = "lazyvim.plugins.extras.util.gitui" },
+    { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
