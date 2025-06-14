@@ -106,4 +106,12 @@ return {
       presets = { command_palette = false },
     },
   },
+
+  -- Trouble
+  {
+    "folke/trouble.nvim",
+    optional = {},
+    keys = {},
+    opts = {},
+  },
 }

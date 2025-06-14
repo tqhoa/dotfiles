@@ -24,7 +24,7 @@ return {
       options = {
         theme = "auto",
         globalstatus = vim.o.laststatus == 3,
-        disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter" } },
+        disabled_filetypes = { statusline = { "snacks_dashboard", "alpha", "ministarter" } },
       },
       sections = {
         lualine_a = { "mode" },
@@ -44,7 +44,33 @@ return {
             },
           },
 
-          { "filetype", icon_only = false, separator = "", padding = { left = 1, right = 0 } },
+          {
+            "windows",
+            padding = { left = 1, right = 1 },
+            use_mode_colors = true,
+            mode = 0,
+            windows_color = {
+              active = function()
+                return { fg = Snacks.util.color("DiffText") }
+              end,
+            },
+          },
+
+          {
+            "tabs",
+            padding = { left = 1, right = 1 },
+            use_mode_colors = true,
+            mode = 0,
+            path = 2,
+            tabs_color = {
+              active = function()
+                return { fg = Snacks.util.color("Constant") }
+              end,
+            },
+          },
+
+          { "searchcount", padding = { left = 1, right = 1 } },
+          { "selectioncount", padding = { left = 1, right = 1 } },
           { LazyVim.lualine.pretty_path() },
         },
         lualine_x = {
@@ -90,6 +116,39 @@ return {
               end
             end,
           },
+          {
+            "encoding",
+            padding = { left = 1, right = 1 },
+            color = function()
+              return { fg = Snacks.util.color("Special") }
+            end,
+          },
+
+          {
+            "filetype",
+            icon_only = false,
+            padding = { left = 1, right = 1 },
+            color = function()
+              return { fg = Snacks.util.color("Constant") }
+            end,
+          },
+
+          {
+            "filesize",
+            icon_only = false,
+            padding = { left = 1, right = 1 },
+            color = function()
+              return { fg = Snacks.util.color("Statement") }
+            end,
+          },
+          {
+            "lsp_status",
+            icon_only = false,
+            padding = { left = 1, right = 1 },
+            color = function()
+              return { fg = Snacks.util.color("Debug") }
+            end,
+          },
         },
         lualine_y = {
           { "progress", separator = " ", padding = { left = 1, right = 0 } },
@@ -97,7 +156,7 @@ return {
         },
         lualine_z = {
           function()
-            return " " .. os.date("%R")
+            return "  " .. os.date("%R")
           end,
         },
       },
@@ -106,10 +165,11 @@ return {
 
     -- do not add trouble symbols if aerial is enabled
     -- And allow it to be overriden for some buffer types (see autocmds)
+    --[[
     if vim.g.trouble_lualine and LazyVim.has("trouble.nvim") then
       local trouble = require("trouble")
       local symbols = trouble.statusline({
-        mode = "symbols",
+        mode = "lsp_document_symbols",
         groups = {},
         title = false,
         filter = { range = true },
@@ -123,6 +183,7 @@ return {
         end,
       })
     end
+    ]]
 
     return opts
   end,

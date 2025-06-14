@@ -1,7 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   dependencies = {
-    "p00f/nvim-ts-rainbow",
+    --"p00f/nvim-ts-rainbow",
   },
   opts = {
     ensure_installed = {
@@ -11,6 +11,6 @@ return {
       "http",
     },
 
-    rainbow = { enable = true, disable = {}, extended_mode = true, max_file_lines = nil },
+    --rainbow = { enable = true, disable = {}, extended_mode = true, max_file_lines = nil },
   },
 }

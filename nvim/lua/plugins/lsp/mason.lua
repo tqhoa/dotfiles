@@ -35,7 +35,7 @@ return {
         "graphql",
         "pyright",
         "volar",
-        "gopls",
+        --"gopls",
       },
     })
 
@@ -46,9 +46,9 @@ return {
         "stylua",
         "debugpy",
         "black",
-        "goimports",
-        "gofumpt",
-        "delve",
+        --"goimports",
+        --"gofumpt",
+        --"delve",
       },
     })
   end,

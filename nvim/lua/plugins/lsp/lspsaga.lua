@@ -13,6 +13,10 @@ return {
         winblend = 10,
         border = "rounded",
       },
+      symbol_in_winbar = {
+        enable = true,
+        color_mode = false,
+      },
     })
   end,
 }
