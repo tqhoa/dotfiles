@@ -31,6 +31,7 @@ keymap.set("", "sl", "<C-w>l")
 -- closed window
 keymap.set("n", "wq", "<Cmd>:wq<cr>")
 keymap.set("n", "wa", "<Cmd>:wqa<cr>")
+keymap.set("n", "qq", "<Cmd>:q!<cr>")
 
 -- Resize window
 keymap.set("n", "<C-w><left>", "<C-w><")

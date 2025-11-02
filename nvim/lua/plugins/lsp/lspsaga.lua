@@ -10,12 +10,12 @@ return {
       },
       ui = {
         code_action = "💡",
-        winblend = 10,
+        winblend = 100,
         border = "rounded",
       },
       symbol_in_winbar = {
         enable = true,
-        color_mode = false,
+        color_mode = true,
       },
     })
   end,

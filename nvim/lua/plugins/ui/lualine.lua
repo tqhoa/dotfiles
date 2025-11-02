@@ -47,7 +47,7 @@ return {
           {
             "windows",
             padding = { left = 1, right = 1 },
-            use_mode_colors = true,
+            use_mode_colors = false,
             mode = 0,
             windows_color = {
               active = function()
@@ -98,6 +98,7 @@ return {
             cond = require("lazy.status").has_updates,
             color = function() return { fg = Snacks.util.color("Special") } end,
           },
+
           {
             "diff",
             symbols = {
@@ -116,11 +117,12 @@ return {
               end
             end,
           },
+
           {
-            "encoding",
+            "location",
             padding = { left = 1, right = 1 },
             color = function()
-              return { fg = Snacks.util.color("Special") }
+              return { fg = Snacks.util.color("Number") }
             end,
           },
 
@@ -141,12 +143,20 @@ return {
               return { fg = Snacks.util.color("Statement") }
             end,
           },
+
           {
             "lsp_status",
             icon_only = false,
             padding = { left = 1, right = 1 },
             color = function()
-              return { fg = Snacks.util.color("Debug") }
+              return { fg = Snacks.util.color("Constant") }
+            end,
+          },
+          {
+            "encoding",
+            padding = { left = 1, right = 1 },
+            color = function()
+              return { fg = Snacks.util.color("Special") }
             end,
           },
         },
