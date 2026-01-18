@@ -34,6 +34,8 @@ require("lazy").setup({
 
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
+    { import = "lazyvim.plugins.extras.editor.neo-tree" },
+    { import = "lazyvim.plugins.extras.editor.telescope" },
     --{ import = "lazyvim.plugins.extras.editor.aerial" },
   },
   defaults = {

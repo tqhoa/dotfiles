@@ -1,0 +1,238 @@
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, ":", 0 } }
+}
+{ 0, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "" } }
+}
+{ 1, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "n" } }
+}
+{ 2, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "no" } }
+}
+{ -1, 0, 0, -1,
+  event = "popupmenu_show",
+  kind = { { "NoMatchParen", "", "", "" }, { "Noice", "", "", "" }, { "NoiceAll", "", "", "" }, { "NoiceConfig", "", "", "" }, { "NoiceDebug", "", "", "" }, { "NoiceDisable", "", "", "" }, { "NoiceDismiss", "", "", "" }, { "NoiceEnable", "", "", "" }, { "NoiceErrors", "", "", "" }, { "NoiceFzf", "", "", "" }, { "NoiceHistory", "", "", "" }, { "NoiceLast", "", "", "" }, { "NoiceLog", "", "", "" }, { "NoicePick", "", "", "" }, { "NoiceRoutes", "", "", "" }, { "NoiceSnacks", "", "", "" }, { "NoiceStats", "", "", "" }, { "NoiceTelescope", "", "", "" }, { "NoiceViewstats", "", "", "" }, { "noautocmd", "", "", "" }, { "nohlsearch", "", "", "" }, { "noreabbrev", "", "", "" }, { "noremap", "", "", "" }, { "noremenu", "", "", "" }, { "normal", "", "", "" }, { "noswapfile", "", "", "" } }
+}
+{ 2, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "no" } }
+}
+{ 2, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "no" } }
+}
+{
+  event = "popupmenu_select",
+  kind = 0
+}
+{ 12, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "NoMatchParen" } }
+}
+{
+  event = "popupmenu_select",
+  kind = 1
+}
+{ 5, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "Noice" } }
+}
+{
+  event = "popupmenu_hide"
+}
+{ false,
+  event = "cmdline_hide",
+  kind = 1
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "gk", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "gk", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "gk", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "gk", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "gk", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "gk", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "gk", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "gj", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "~@k", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "~@k", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{ { { 0, "Autosave: saved at 17:49:45", 0 } }, false, true,
+  event = "msg_show",
+  kind = "lua_print"
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "^[", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "^[", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "^[", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "^[", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, ":", 0 } }
+}
+{
+  event = "msg_clear"
+}
+{ 0, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "" } }
+}
+{ 1, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "w" } }
+}
+{ false,
+  event = "cmdline_hide",
+  kind = 1
+}
+{ { { 0, '"lua/config/lazy.lua" ', 0 } }, false, false,
+  event = "msg_show",
+  kind = "bufwrite"
+}
+{ { { 0, '"lua/config/lazy.lua" 71L, 2255B', 0 } }, true, true,
+  event = "msg_show",
+  kind = "bufwrite"
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "w", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "w", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{
+  event = "msg_showcmd",
+  kind = { { 0, "w", 0 } }
+}
+{
+  event = "msg_showcmd",
+  kind = {}
+}
+{ { { 0, '"lua/config/lazy.lua" ', 0 } }, true, false,
+  event = "msg_show",
+  kind = "bufwrite"
+}
+{ { { 0, '"lua/config/lazy.lua" 71L, 2255B', 0 } }, true, true,
+  event = "msg_show",
+  kind = "bufwrite"
+}
