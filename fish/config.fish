@@ -12,6 +12,7 @@ set -g fish_autosuggestion_enabled 1
 set -g fish_color_autosuggestion 444444
 
 
+set -x NODE_NO_WARNINGS 1
 # aliases
 alias ls "ls -p -G"
 alias la "ls -A"
@@ -19,6 +20,8 @@ alias ll "ls -l"
 alias lla "ll -A"
 alias g git
 alias cat bat
+alias vim nvim
+alias vi nvim
 
 command -qv nvim && alias vim nvim
 
@@ -36,15 +39,15 @@ set -gx PATH node_modules/.bin $PATH
 #set -gx PATH $GOPATH/bin $PATH
 
 # NVM
-#function __check_rvm --on-variable PWD --description 'Do nvm stuff'
-#    status --is-command-substitution; and return
+function __check_rvm --on-variable PWD --description 'Do nvm stuff'
+    status --is-command-substitution; and return
 
-#    if test -f .nvmrc; and test -r .nvmrc
-#       nvm use
-#    else
-#    end
-#end
-#set --universal nvm_default_version v21.7.1
+    if test -f .nvmrc; and test -r .nvmrc
+        nvm use
+    else
+    end
+end
+set --universal nvm_default_version v21.7.1
 
 switch (uname)
     case Darwin

@@ -18,8 +18,10 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "te", "<cmd> tabedit <cr>")
 
 -- Split window
-keymap.set("n", "ss", ":split<Return><C-w>w")
-keymap.set("n", "sv", ":vsplit<Return><C-w>w")
+--keymap.set("n", "ss", ":split<veturn><C-w>w")
+--keymap.set("n", "sv", ":vsplit<Return><C-w>w")
+keymap.set("n", "ss", "<Cmd>:split<cr>")
+keymap.set("n", "sv", "<Cmd>:vsplit<cr>")
 
 -- Move window
 keymap.set("n", "<Space>", "<C-w>w")
@@ -41,5 +43,7 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 
 keymap.set("i", "jj", "<ESC>", { noremap = true, silent = false })
 keymap.set("i", "kk", "<ESC>", { noremap = true, silent = false })
+
+keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true })
 
 -- Plugins

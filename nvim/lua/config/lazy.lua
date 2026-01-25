@@ -30,6 +30,7 @@ require("lazy").setup({
     { import = "plugins" },
     { import = "plugins.lsp" },
     { import = "plugins.ui" },
+    { import = "plugins.ai" },
     --{ import = "plugins.dap" },
 
     -- import any extras modules here
