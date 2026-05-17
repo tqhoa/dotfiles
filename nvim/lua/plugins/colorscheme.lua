@@ -1,7 +1,7 @@
 return {
   "svrana/neosolarized.nvim",
   lazy = false,
-  priority = 1000,
+  priority = 1001,
   config = function()
     require("neosolarized").setup({
       comment_italics = true,
@@ -9,6 +9,7 @@ return {
     })
     vim.cmd.colorscheme("neosolarized")
   end,
+
   dependencies = {
     "tjdevries/colorbuddy.nvim",
   },

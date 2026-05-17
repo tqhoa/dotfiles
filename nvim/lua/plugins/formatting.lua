@@ -15,7 +15,7 @@ return {
       ["yaml"] = { "prettier" },
       ["markdown"] = { "prettier" },
       ["graphql"] = { "prettier" },
-      ["go"] = { "gofumpt", "goimports" },
+      --["go"] = { "gofumpt", "goimports" },
     },
   },
 }
